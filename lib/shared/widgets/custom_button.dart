@@ -8,7 +8,6 @@ import 'package:grand_hotel_ui/core/theme/app_text_style.dart';
 class AppButton extends StatelessWidget {
   final String text;
   final VoidCallback onPressed;
-  final IconData? icon;
   final Color? backgroundColor;
   final Color? foregroundColor;
 
@@ -16,7 +15,6 @@ class AppButton extends StatelessWidget {
     super.key,
     required this.text,
     required this.onPressed,
-    this.icon,
     this.backgroundColor,
     this.foregroundColor,
   });
@@ -48,17 +46,12 @@ class AppButton extends StatelessWidget {
             Text(
               text,
               style: TextStyles.body.copyWith(
-                fontFamily: AppFonts.plusJakartaSans,
+                fontFamily: AppFonts.jost,
+                fontWeight: .w500,
                 color: foregroundColor ?? AppColors.whiteColor,
               ),
             ),
-            // if (icon != null) ...[
-            //   const SizedBox(width: AppSizes.xs),
-            //   Icon(
-            //     icon,
-            //     size: AppSizes.iconMedium,
-            //   ),
-            // ],
+           
           ],
         ),
       ),

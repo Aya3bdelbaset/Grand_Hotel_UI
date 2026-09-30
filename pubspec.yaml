@@ -9,8 +9,11 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  flutter_native_splash: ^2.4.8
   flutter_screenutil: ^5.9.3
   flutter_svg: ^2.3.0
+  pinput: ^6.0.2
+
 
 dev_dependencies:
   flutter_test:
