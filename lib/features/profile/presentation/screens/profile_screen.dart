@@ -93,12 +93,7 @@ class _ProfileHeader extends StatelessWidget {
             width: avatarSize,
             height: avatarSize,
             fit: BoxFit.cover,
-            errorBuilder: (_, __, ___) => Container(
-              width: avatarSize,
-              height: avatarSize,
-              color: AppColors.accentColor,
-              child: const Icon(Icons.person, color: AppColors.greyColor),
-            ),
+
           ),
         ),
         SizedBox(width: 12.w),
