@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:grand_hotel_ui/core/theme/app_theme.dart';
 
 class GrandhotelApp extends StatelessWidget {
-  const new({super.key});
+  const GrandhotelApp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -11,12 +11,13 @@ class GrandhotelApp extends StatelessWidget {
       designSize: const Size(375, 812),
       minTextAdapt: true,
       splitScreenMode: true,
-
-      child: MaterialApp(
-        theme: AppThemes.lightTheme,
-        debugShowCheckedModeBanner: false,
-        home: const Placeholder(),
-      ),
+      builder: (context, child) {
+        return MaterialApp(
+          theme: AppThemes.lightTheme,
+          debugShowCheckedModeBanner: false,
+          home: const Placeholder(),
+        );
+      },
     );
   }
 }
