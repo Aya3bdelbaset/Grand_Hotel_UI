@@ -1,4 +1,7 @@
 abstract final class AppAssets {
+  static const onboarding = 'assets/images/OnBoarding.png';
+  static const splash= 'assets/icons/logo.svg';
+}
   static const String astonVill = 'assets/images/aston_vill.png';
   static const String mysticPalms = 'assets/images/mystic_palms.png';
   static const String elysianSuites = 'assets/images/elysian_suites.png';

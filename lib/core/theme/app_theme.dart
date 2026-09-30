@@ -35,12 +35,8 @@ class AppThemes {
 
       // Text
       textTheme: TextTheme(
-        displayLarge: TextStyles.title1.copyWith(
-          fontFamily: AppFonts.jost,
-        ),
-        displayMedium: TextStyles.title2.copyWith(
-          fontFamily: AppFonts.jost,
-        ),
+        displayLarge: TextStyles.title1.copyWith(fontFamily: AppFonts.jost),
+        displayMedium: TextStyles.title2.copyWith(fontFamily: AppFonts.jost),
         bodyLarge: TextStyles.body.copyWith(
           fontFamily: AppFonts.plusJakartaSans,
         ),
@@ -59,26 +55,30 @@ class AppThemes {
           fontFamily: AppFonts.plusJakartaSans,
         ),
 
-        contentPadding:  EdgeInsets.symmetric(
-          horizontal: 16.w,
-          vertical: 14.h,
-        ),
+        contentPadding: EdgeInsets.symmetric(horizontal: 16, vertical: 14),
 
         border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(12.r),
+          borderRadius: BorderRadius.circular(12),
           borderSide: BorderSide.none,
         ),
 
         enabledBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(12.r),
+          borderRadius: BorderRadius.circular(12),
           borderSide: BorderSide.none,
+        ),
+        errorBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(10),
+          borderSide: BorderSide(color: Colors.red),
+        ),
+
+        focusedErrorBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(10),
+          borderSide: BorderSide(color: Colors.red),
         ),
 
         focusedBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(12.r),
-          borderSide: BorderSide(
-            color: AppColors.primaryColor,
-          ),
+          borderRadius: BorderRadius.circular(12),
+          borderSide: BorderSide(color: AppColors.primaryColor),
         ),
       ),
 
@@ -89,7 +89,7 @@ class AppThemes {
           foregroundColor: AppColors.whiteColor,
           elevation: 0,
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(12.r),
+            borderRadius: BorderRadius.circular(12),
           ),
           textStyle: TextStyles.body.copyWith(
             fontFamily: AppFonts.jost,
@@ -99,9 +99,7 @@ class AppThemes {
       ),
 
       // Icons
-      iconTheme: IconThemeData(
-        color: AppColors.blackColor,
-      ),
+      iconTheme: IconThemeData(color: AppColors.blackColor),
 
       // Splash / Highlight
       splashColor: Colors.transparent,

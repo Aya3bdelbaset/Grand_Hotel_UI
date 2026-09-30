@@ -11,21 +11,21 @@ abstract final class AppSizes {
   static const double huge = 40;
 
   // Radius
-  static  double radiusXs = 6.r;
-  static  double radiusSm = 8.r;
-  static  double radiusMd = 30.r;
-  static  double radiusLg = 12.r;
-  static  double radiusXl = 20.r;
-  static  double radiusXxl = 24.r;
-  static  double radiusRound = 999.r;
+  static  double get radiusXs => 6.r;
+  static  double  get radiusSm  => 8.r;
+  static  double  get radiusMd =>  30.r;
+  static  double get radiusLg =>  12.r;
+  static  double get radiusXl =>  20.r;
+  static  double get radiusXxl => 24.r;
+  static  double get radiusRound =>  999.r;
 
   // Buttons
-  static double buttonHeight = 56.h;
-  static  double buttonSmallHeight = 36.h;
-  static  double buttonWidth = 327.w;
+  static double get buttonHeight => 56.h;
+  static  double get buttonSmallHeight =>  36.h;
+  static  double get buttonWidth  => 327.w;
 
   // Inputs
-  static  double inputHeight = 52.h;
+  static  double get  inputHeight =>  52.h;
 
   // Avatar
   static const double avatarSmall = 32;
@@ -40,7 +40,7 @@ abstract final class AppSizes {
   static const double iconXLarge = 32;
 
   // Bottom navigation
-  static  double bottomNavHeight = 98.h;
+  static  double get  bottomNavHeight =>  98.h;
 
   // Screen
   static const double screenHorizontalPadding = 20;
