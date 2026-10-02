@@ -1,16 +1,12 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-
+import 'package:grand_hotel_ui/core/shared/widgets/custom_button.dart';
 import 'package:grand_hotel_ui/core/constants/app_fonts.dart';
 import 'package:grand_hotel_ui/core/theme/app_colors.dart';
 import 'package:grand_hotel_ui/core/theme/app_text_style.dart';
 import 'package:grand_hotel_ui/core/validators/validation.dart';
 import 'package:grand_hotel_ui/features/auth/presentation/widgets/custom_text_field.dart';
 import 'package:grand_hotel_ui/features/auth/presentation/widgets/footer.dart';
-import 'package:grand_hotel_ui/features/auth/presentation/widgets/socialButton.dart';
-import 'package:grand_hotel_ui/shared/widgets/custom_button.dart';
 
 class SignInScreen extends StatefulWidget {
   const SignInScreen({super.key});
@@ -35,8 +31,6 @@ class _SignInScreenState extends State<SignInScreen> {
     super.dispose();
   }
 
-  
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -51,7 +45,6 @@ class _SignInScreenState extends State<SignInScreen> {
               children: [
                 SizedBox(height: 20.h),
 
-               
                 GestureDetector(
                   onTap: () {
                     if (Navigator.canPop(context)) {
@@ -67,7 +60,6 @@ class _SignInScreenState extends State<SignInScreen> {
 
                 SizedBox(height: 34.h),
 
-               
                 Center(
                   child: Text(
                     'Let’s Sign you in',
@@ -79,7 +71,6 @@ class _SignInScreenState extends State<SignInScreen> {
 
                 SizedBox(height: 5.h),
 
-                
                 Center(
                   child: Text(
                     'Lorem ipsum dolor sit amet, consectetur',
@@ -93,7 +84,6 @@ class _SignInScreenState extends State<SignInScreen> {
 
                 SizedBox(height: 25.h),
 
-                
                 CustomTextField(
                   label: 'Email Address',
                   hintText: 'Enter your email address',
@@ -104,7 +94,6 @@ class _SignInScreenState extends State<SignInScreen> {
 
                 SizedBox(height: 16.h),
 
-                
                 CustomTextField(
                   label: 'Password',
                   hintText: 'Enter your password',
@@ -129,7 +118,6 @@ class _SignInScreenState extends State<SignInScreen> {
 
                 SizedBox(height: 16.h),
 
-                
                 Row(
                   children: [
                     SizedBox(
@@ -143,9 +131,7 @@ class _SignInScreenState extends State<SignInScreen> {
                           });
                         },
                         activeColor: AppColors.primaryColor,
-                        side: const BorderSide(
-                          color: AppColors.greyColor,
-                        ),
+                        side: const BorderSide(color: AppColors.greyColor),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(10.r),
                         ),
@@ -168,10 +154,7 @@ class _SignInScreenState extends State<SignInScreen> {
 
                     GestureDetector(
                       onTap: () {
-                        Navigator.pushNamed(
-                          context,
-                          '/forgot-password',
-                        );
+                        Navigator.pushNamed(context, '/forgot-password');
                       },
                       child: Text(
                         'Forgot Password',
@@ -192,9 +175,8 @@ class _SignInScreenState extends State<SignInScreen> {
                   height: 46.h,
                   child: AppButton(
                     text: 'Sign In',
-                    onPressed: (){
-                            Navigator.pushReplacementNamed(context, '/home');
-
+                    onPressed: () {
+                      Navigator.pushReplacementNamed(context, '/home');
                     },
                   ),
                 ),
@@ -242,4 +224,3 @@ class _SignInScreenState extends State<SignInScreen> {
     );
   }
 }
-

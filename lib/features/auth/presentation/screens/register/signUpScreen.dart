@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
+import 'package:grand_hotel_ui/core/shared/widgets/custom_button.dart';
 import 'package:grand_hotel_ui/core/constants/app_fonts.dart';
 import 'package:grand_hotel_ui/core/routes/routes_name.dart';
 import 'package:grand_hotel_ui/core/theme/app_colors.dart';
@@ -10,7 +10,6 @@ import 'package:grand_hotel_ui/core/validators/validation.dart';
 import 'package:grand_hotel_ui/features/auth/presentation/widgets/arrow_back.dart';
 import 'package:grand_hotel_ui/features/auth/presentation/widgets/custom_text_field.dart';
 import 'package:grand_hotel_ui/features/auth/presentation/widgets/footer.dart';
-import 'package:grand_hotel_ui/shared/widgets/custom_button.dart';
 
 class SignUpScreen extends StatefulWidget {
   const SignUpScreen({super.key});

@@ -4,8 +4,7 @@ import 'package:grand_hotel_ui/core/constants/app_sizes.dart';
 import 'package:grand_hotel_ui/core/theme/app_colors.dart';
 import 'package:grand_hotel_ui/features/message/data/models/chat_model.dart';
 import 'package:grand_hotel_ui/features/message/presentation/widgets/chat_tile.dart';
-import 'package:grand_hotel_ui/shared/widgets/custom_search_bar.dart';
-
+import 'package:grand_hotel_ui/core/shared/widgets/custom_search_bar.dart';
 class MessagesScreen extends StatelessWidget {
   const MessagesScreen({super.key});
 

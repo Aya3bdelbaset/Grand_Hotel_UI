@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:grand_hotel_ui/core/constants/app_fonts.dart';
 import 'package:grand_hotel_ui/core/constants/app_sizes.dart';
@@ -27,16 +26,12 @@ class AppButton extends StatelessWidget {
       child: ElevatedButton(
         onPressed: onPressed,
         style: ElevatedButton.styleFrom(
-          backgroundColor:
-              backgroundColor ?? AppColors.primaryColor,
-          foregroundColor:
-              foregroundColor ?? AppColors.whiteColor,
+          backgroundColor: backgroundColor ?? AppColors.primaryColor,
+          foregroundColor: foregroundColor ?? AppColors.whiteColor,
           elevation: 0,
           padding: EdgeInsets.zero,
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(
-              AppSizes.radiusLg,
-            ),
+            borderRadius: BorderRadius.circular(AppSizes.radiusLg),
           ),
         ),
         child: Row(
@@ -51,11 +46,9 @@ class AppButton extends StatelessWidget {
                 color: foregroundColor ?? AppColors.whiteColor,
               ),
             ),
-           
           ],
         ),
       ),
     );
   }
 }
-

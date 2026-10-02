@@ -44,7 +44,7 @@ class _SplashScreenState extends State<SplashScreen> {
             Text(
               AppStrings.appName,
               textAlign: TextAlign.center,
-              style: TextStyles.logofont.copyWith(
+              style: TextStyles.logoFont.copyWith(
                 fontFamily: AppFonts.jost,
                 color: Colors.white,
               ),

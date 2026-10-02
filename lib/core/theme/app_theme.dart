@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:grand_hotel_ui/core/constants/app_fonts.dart';
 import 'package:grand_hotel_ui/core/theme/app_colors.dart';
 import 'package:grand_hotel_ui/core/theme/app_text_style.dart';
@@ -26,7 +25,7 @@ class AppThemes {
         elevation: 0,
         centerTitle: true,
         surfaceTintColor: Colors.transparent,
-        titleTextStyle: TextStyles.title2.copyWith(
+        titleTextStyle: TextStyles.title1.copyWith(
           color: AppColors.blackColor,
           fontFamily: AppFonts.jost,
           fontWeight: FontWeight.w600,
@@ -36,7 +35,7 @@ class AppThemes {
       // Text
       textTheme: TextTheme(
         displayLarge: TextStyles.title1.copyWith(fontFamily: AppFonts.jost),
-        displayMedium: TextStyles.title2.copyWith(fontFamily: AppFonts.jost),
+        displayMedium: TextStyles.title1.copyWith(fontFamily: AppFonts.jost),
         bodyLarge: TextStyles.body.copyWith(
           fontFamily: AppFonts.plusJakartaSans,
         ),

@@ -5,7 +5,7 @@ import 'package:grand_hotel_ui/core/routes/routes_name.dart';
 import 'package:grand_hotel_ui/core/theme/app_text_style.dart';
 import 'package:grand_hotel_ui/features/auth/presentation/widgets/arrow_back.dart';
 import 'package:grand_hotel_ui/features/auth/presentation/widgets/custom_text_field.dart';
-import 'package:grand_hotel_ui/shared/widgets/custom_button.dart';
+import 'package:grand_hotel_ui/core/shared/widgets/custom_button.dart';
 
 class CreateNewPasswordScreen extends StatefulWidget {
   const CreateNewPasswordScreen({super.key});
@@ -41,8 +41,6 @@ class _CreateNewPasswordScreenState extends State<CreateNewPasswordScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final theme = Theme.of(context);
-
     return Scaffold(
       backgroundColor: Colors.white,
       body: SafeArea(

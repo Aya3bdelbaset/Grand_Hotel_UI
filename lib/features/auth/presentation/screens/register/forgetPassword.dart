@@ -2,11 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:grand_hotel_ui/core/constants/app_fonts.dart';
 import 'package:grand_hotel_ui/core/routes/routes_name.dart';
-import 'package:grand_hotel_ui/core/theme/app_colors.dart';
 import 'package:grand_hotel_ui/core/theme/app_text_style.dart';
 import 'package:grand_hotel_ui/features/auth/presentation/widgets/arrow_back.dart';
 import 'package:grand_hotel_ui/features/auth/presentation/widgets/custom_text_field.dart';
-import 'package:grand_hotel_ui/shared/widgets/custom_button.dart';
+import 'package:grand_hotel_ui/core/shared/widgets/custom_button.dart';
 
 class ForgotPasswordScreen extends StatefulWidget {
   const ForgotPasswordScreen({super.key});
@@ -19,17 +18,13 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
   final _formKey = GlobalKey<FormState>();
   final _emailController = TextEditingController();
 
-  static const Color primaryColor = AppColors.primaryColor;
-  static const Color fieldColor = Color(0xFFF5F5F5);
-  static const Color textColor = Color(0xFF20212D);
-
   @override
   void dispose() {
     _emailController.dispose();
     super.dispose();
   }
 
-  void _onNextPressed() {
+  void onNextPressed() {
     if (_formKey.currentState!.validate()) {
       Navigator.pushNamed(context, RouteNames.createNewPassword);
     }
