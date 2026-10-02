@@ -22,7 +22,8 @@ dependencies:
   google_nav_bar: ^5.0.7
   motion_tab_bar_v2: ^3.0.0
   flutter_gap: ^1.2.0
-  pinput: ^6.0.2
+  pinput: ^7.0.0
+  barcode_widgets: ^2.0.0
 
 dev_dependencies:
   flutter_test:

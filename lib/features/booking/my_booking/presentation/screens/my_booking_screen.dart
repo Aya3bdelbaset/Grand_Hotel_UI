@@ -6,8 +6,7 @@ import 'package:grand_hotel_ui/features/booking/my_booking/data/models/booking_m
 import 'package:grand_hotel_ui/features/booking/my_booking/presentation/screens/booking_details_screen.dart';
 import 'package:grand_hotel_ui/features/booking/my_booking/presentation/widgets/booking_card.dart';
 import 'package:grand_hotel_ui/features/booking/my_booking/presentation/widgets/booking_tabs.dart';
-import 'package:grand_hotel_ui/shared/widgets/custom_search_bar.dart';
-
+import 'package:grand_hotel_ui/core/shared/widgets/custom_search_bar.dart';
 class MyBookingScreen extends StatefulWidget {
   const MyBookingScreen({super.key});
 
@@ -40,7 +39,7 @@ class _MyBookingScreenState extends State<MyBookingScreen> {
         child: Column(
           children: [
             SizedBox(height: 16.h),
-            const CustomSearchBar(),
+             CustomSearchBar(),
             SizedBox(height: 16.h),
             BookingTabs(
               selectedIndex: _tab,
