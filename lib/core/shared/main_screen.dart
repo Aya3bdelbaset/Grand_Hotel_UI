@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:grand_hotel_ui/features/booking/my_booking/presentation/screens/my_booking_screen.dart';
 import 'package:grand_hotel_ui/features/home/presentation/screens/home_screen.dart';
 import 'package:grand_hotel_ui/core/shared/widgets/app_bottom_navigation.dart';
+import 'package:grand_hotel_ui/features/message/presentation/screens/messages_screen.dart';
+import 'package:grand_hotel_ui/features/profile/presentation/screens/profile_screen.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
@@ -14,9 +17,9 @@ class _MainScreenState extends State<MainScreen> {
 
   final screens = const [
     HomeScreen(),
-    Text('Favorite Screen'),
-    Text(" gyhujikol")
-    , Text("zdfcgvhjnkml,")
+    MyBookingScreen(),
+    MessagesScreen(),
+    ProfileScreen(),
   ];
 
   @override

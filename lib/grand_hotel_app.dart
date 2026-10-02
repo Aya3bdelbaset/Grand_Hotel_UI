@@ -11,11 +11,9 @@ class GrandHotelApp extends StatelessWidget {
       designSize: const Size(375, 812),
       minTextAdapt: true,
       splitScreenMode: true,
-
       builder: (context, child) {
         return MaterialApp(debugShowCheckedModeBanner: false, home: child);
       },
-
       child: const MainScreen(),
     );
   }
