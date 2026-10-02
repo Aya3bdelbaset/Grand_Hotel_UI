@@ -17,8 +17,8 @@ class TextStyles {
   static TextStyle get title1 =>
       TextStyle(fontSize: 22.sp, fontWeight: FontWeight.w600);
 
-  // static TextStyle get title2 =>
-  //     TextStyle(fontSize: 20.sp, fontWeight: FontWeight.w600);
+  static TextStyle get title2 =>
+      TextStyle(fontSize: 20.sp, fontWeight: FontWeight.w600);
   static TextStyle get subtitle =>
       TextStyle(fontSize: 18.sp, fontWeight: FontWeight.w500);
 

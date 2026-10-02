@@ -24,6 +24,7 @@ dependencies:
   flutter_gap: ^1.2.0
   pinput: ^7.0.0
   barcode_widgets: ^2.0.0
+  syncfusion_flutter_datepicker: ^35.1.37
 
 dev_dependencies:
   flutter_test:

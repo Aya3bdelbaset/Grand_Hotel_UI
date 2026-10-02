@@ -1,31 +1,10 @@
-
-
-// ملاحظات للتيم
-//
-// كل Developer يلتزم باسم الـ Screen المكتوب في الـ Builder
-// ومايغيرش الاسم. 
-// الملف ده مسؤول عن الـ Navigation والـ Routes الخاصة بكل Screens.
-//
-//
-// بعد ما تعمل الـ Screen الخاصة بيك:
-// 1. استخدم نفس اسم الـ Screen المكتوب هنا بالضبط.
-// 2. فك الـ Comment الخاص بالـ Route.
-// 3. فك الـ Import الخاص بالـ Screen.
-// 4. تأكد إن اسم الـ Class واسم الملف مطابقين.
-//
-// مثال:
-// HomeScreen
-// home_screen.dart
-//
-// ⚠️ مهم: أسماء الـ Screens مكتوبة هنا بشكل نهائي،
-// استخدموا نفس الأسماء بدون تغيير.
-
-
-
-
-
 import 'package:flutter/material.dart';
 import 'package:grand_hotel_ui/core/routes/routes_name.dart';
+
+import 'package:grand_hotel_ui/features/booking/request_book/presentation/screens/paymentMethod.dart';
+import 'package:grand_hotel_ui/features/booking/request_book/presentation/screens/request_to_book_screen.dart';
+import 'package:grand_hotel_ui/features/booking/request_book/presentation/screens/bookingComplete.dart';
+
 import 'package:grand_hotel_ui/features/auth/presentation/screens/onboarding/onboarding.dart';
 import 'package:grand_hotel_ui/features/auth/presentation/screens/register/createNewPasswordScreen.dart';
 import 'package:grand_hotel_ui/features/auth/presentation/screens/register/forgetPassword.dart';
@@ -55,13 +34,12 @@ abstract final class AppRoutes {
           settings: settings,
         );
 
-
       case RouteNames.signUp:
         return MaterialPageRoute(
           builder: (_) => const SignUpScreen(),
           settings: settings,
         );
-      
+
       case RouteNames.enterOTP:
         return MaterialPageRoute(
           builder: (_) => const EnterOTPScreen(),
@@ -74,115 +52,36 @@ abstract final class AppRoutes {
           settings: settings,
         );
 
-
-        case RouteNames.createNewPassword:
+      case RouteNames.createNewPassword:
         return MaterialPageRoute(
           builder: (_) => const CreateNewPasswordScreen(),
           settings: settings,
         );
 
+      case RouteNames.requestToBook:
+        return MaterialPageRoute(
+          builder: (_) => const RequestToBookScreen(),
+          settings: settings,
+        );
 
+      case RouteNames.paymentMethod:
+        return MaterialPageRoute(
+          builder: (_) => const PaymentMethodScreen(),
+          settings: settings,
+        );
 
-
-
-
-      
-//          case RouteNames.home:
-//         return MaterialPageRoute(
-//           builder: (_) => const HomeScreen(),
-//           settings: settings,
-//         );
-
-//           case RouteNames.search:
-//         return MaterialPageRoute(
-//           builder: (_) => const SearchScreen(),
-//           settings: settings,
-//         );
-
-//       case RouteNames.favorite:
-//         return MaterialPageRoute(
-//           builder: (_) => const FavoriteScreen(),
-//           settings: settings,
-//         );
-
-//       case RouteNames.details:
-//         return MaterialPageRoute(
-//           builder: (_) => const DetailsScreen(),
-//           settings: settings,
-//         );
-
-//       case RouteNames.reviews:
-//         return MaterialPageRoute(
-//           builder: (_) => const ReviewsScreen(),
-//           settings: settings,
-//         );
-
-
-
-
-
-//          case RouteNames.requestToBook:
-//         return MaterialPageRoute(
-//           builder: (_) => const RequestToBookScreen(),
-//           settings: settings,
-//         );
-
-//       case RouteNames.selectDate:
-//         return MaterialPageRoute(
-//           builder: (_) => const SelectDateScreen(),
-//           settings: settings,
-//         );
-
-//       case RouteNames.paymentMethod:
-//         return MaterialPageRoute(
-//           builder: (_) => const PaymentMethodScreen(),
-//           settings: settings,
-//         );
-
-//       case RouteNames.checkOut:
-//         return MaterialPageRoute(
-//           builder: (_) => const CheckOutScreen(),
-//           settings: settings,
-//         );
-
-//       case RouteNames.bookingComplete:
-//         return MaterialPageRoute(
-//           builder: (_) => const BookingCompleteScreen(),
-//           settings: settings,
-//         );
-
-
-
-          
-//      case RouteNames.myBooking:
-//         return MaterialPageRoute(
-//           builder: (_) => const MyBookingScreen(),
-//           settings: settings,
-//         );
-
-//       case RouteNames.bookingDetails:
-//         return MaterialPageRoute(
-//           builder: (_) => const BookingDetailsScreen(),
-//           settings: settings,
-//         );
-
-//       case RouteNames.profile:
-//         return MaterialPageRoute(
-//           builder: (_) => const ProfileScreen(),
-//           settings: settings,
-//         );
-
-//       case RouteNames.messages:
-//         return MaterialPageRoute(
-//           builder: (_) => const MessagesScreen(),
-//           settings: settings,
-//         );
+      case RouteNames.bookingComplete:
+        return MaterialPageRoute(
+          builder: (_) => const Bookingcomplete(),
+          settings: settings,
+        );
 
       default:
         return _placeholderRoute(settings, 'Not Found');
     }
-  } 
-static MaterialPageRoute<void> _placeholderRoute(
+  }
+
+  static MaterialPageRoute<void> _placeholderRoute(
     RouteSettings settings,
     String title,
   ) {
@@ -196,5 +95,3 @@ static MaterialPageRoute<void> _placeholderRoute(
     );
   }
 }
-      
-
