@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:grand_hotel_ui/core/constants/app_fonts.dart';
 import 'package:grand_hotel_ui/core/theme/app_colors.dart';
 import 'package:grand_hotel_ui/core/theme/app_text_style.dart';
@@ -26,7 +25,7 @@ class AppThemes {
         elevation: 0,
         centerTitle: true,
         surfaceTintColor: Colors.transparent,
-        titleTextStyle: TextStyles.title2.copyWith(
+        titleTextStyle: TextStyles.title1.copyWith(
           color: AppColors.blackColor,
           fontFamily: AppFonts.jost,
           fontWeight: FontWeight.w600,
@@ -35,12 +34,8 @@ class AppThemes {
 
       // Text
       textTheme: TextTheme(
-        displayLarge: TextStyles.title1.copyWith(
-          fontFamily: AppFonts.jost,
-        ),
-        displayMedium: TextStyles.title2.copyWith(
-          fontFamily: AppFonts.jost,
-        ),
+        displayLarge: TextStyles.title1.copyWith(fontFamily: AppFonts.jost),
+        displayMedium: TextStyles.title1.copyWith(fontFamily: AppFonts.jost),
         bodyLarge: TextStyles.body.copyWith(
           fontFamily: AppFonts.plusJakartaSans,
         ),
@@ -59,10 +54,7 @@ class AppThemes {
           fontFamily: AppFonts.plusJakartaSans,
         ),
 
-        contentPadding:  EdgeInsets.symmetric(
-          horizontal: 16,
-          vertical: 14,
-        ),
+        contentPadding: EdgeInsets.symmetric(horizontal: 16, vertical: 14),
 
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(12),
@@ -73,12 +65,19 @@ class AppThemes {
           borderRadius: BorderRadius.circular(12),
           borderSide: BorderSide.none,
         ),
+        errorBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(10),
+          borderSide: BorderSide(color: Colors.red),
+        ),
+
+        focusedErrorBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(10),
+          borderSide: BorderSide(color: Colors.red),
+        ),
 
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(12),
-          borderSide: BorderSide(
-            color: AppColors.primaryColor,
-          ),
+          borderSide: BorderSide(color: AppColors.primaryColor),
         ),
       ),
 
@@ -99,9 +98,7 @@ class AppThemes {
       ),
 
       // Icons
-      iconTheme: IconThemeData(
-        color: AppColors.blackColor,
-      ),
+      iconTheme: IconThemeData(color: AppColors.blackColor),
 
       // Splash / Highlight
       splashColor: Colors.transparent,

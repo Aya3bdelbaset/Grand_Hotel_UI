@@ -1,16 +1,16 @@
 abstract final class AppAssets {
-  static const String paymentIcon = 'assets/icons/payment.svg';
-  static const String calenderIcon='assets/icons/calender.png';
-  static const String walletIcon ='asset/icons/wallet.png';
-  static const String astonvill="assets/images/astonvill.png";
-  static const String star ="assets/icons/star.svg";
-  static const String cal="assets/icons/cal.svg";
-  static const String user="assets/icons/user.svg";
-  static const String building="assets/icons/building.svg";
-  static const String phone="assets/icons/phone.svg";
-  static const String master=("assets/icons/master.svg");
-  static const String correctcheckbox=("assets/icons/correctcheckbox.svg");
-  static const String visa=("assets/icons/visa2.svg");
-  static const String check=("assets/icons/checkbox.svg");
-  static const String payment=("assets/icons/payment.svg");
+  static const onboarding = 'assets/images/OnBoarding.png';
+  static const splash = 'assets/icons/logo.svg';
+
+  static const String astonVill = 'assets/images/aston_vill.png';
+  static const String mysticPalms = 'assets/images/mystic_palms.png';
+  static const String elysianSuites = 'assets/images/elysian_suites.png';
+  static const String mapImage = 'assets/images/map.png';
+  static const String profileAvatar = 'assets/images/profile_avatar.png';
+  static const String avatar1 = 'assets/images/avatar_1.png';
+  static const String avatar2 = 'assets/images/avatar_2.png';
+  static const String avatar3 = 'assets/images/avatar_3.png';
+  static const String avatar4 = 'assets/images/avatar_4.png';
+  static const String avatar5 = 'assets/images/avatar_5.png';
+  static const String avatar6 = 'assets/images/avatar_6.png';
 }
