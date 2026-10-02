@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:grand_hotel_ui/core/constants/app_fonts.dart';
 import 'package:grand_hotel_ui/core/constants/app_sizes.dart';
@@ -8,7 +7,6 @@ import 'package:grand_hotel_ui/core/theme/app_text_style.dart';
 class AppButton extends StatelessWidget {
   final String text;
   final VoidCallback onPressed;
-  final IconData? icon;
   final Color? backgroundColor;
   final Color? foregroundColor;
 
@@ -16,7 +14,6 @@ class AppButton extends StatelessWidget {
     super.key,
     required this.text,
     required this.onPressed,
-    this.icon,
     this.backgroundColor,
     this.foregroundColor,
   });
@@ -29,16 +26,12 @@ class AppButton extends StatelessWidget {
       child: ElevatedButton(
         onPressed: onPressed,
         style: ElevatedButton.styleFrom(
-          backgroundColor:
-              backgroundColor ?? AppColors.primaryColor,
-          foregroundColor:
-              foregroundColor ?? AppColors.whiteColor,
+          backgroundColor: backgroundColor ?? AppColors.primaryColor,
+          foregroundColor: foregroundColor ?? AppColors.whiteColor,
           elevation: 0,
           padding: EdgeInsets.zero,
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(
-              AppSizes.radiusLg,
-            ),
+            borderRadius: BorderRadius.circular(AppSizes.radiusLg),
           ),
         ),
         child: Row(
@@ -48,7 +41,8 @@ class AppButton extends StatelessWidget {
             Text(
               text,
               style: TextStyles.body.copyWith(
-                fontFamily: AppFonts.plusJakartaSans,
+                fontFamily: AppFonts.jost,
+                fontWeight: .w500,
                 color: foregroundColor ?? AppColors.whiteColor,
               ),
             ),
@@ -58,4 +52,3 @@ class AppButton extends StatelessWidget {
     );
   }
 }
-

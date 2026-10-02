@@ -10,28 +10,33 @@ environment:
   sdk: ">=3.13.0 <4.0.0"
 
 dependencies:
+  barcode_widget: ^2.0.4
+
   flutter:
     sdk: flutter
 
   cached_network_image: ^4.0.2
+  flutter_native_splash: ^2.4.8
   flutter_screenutil: ^5.9.3
   flutter_svg: ^2.3.0
   google_nav_bar: ^5.0.7
   motion_tab_bar_v2: ^3.0.0
   flutter_gap: ^1.2.0
+  pinput: ^6.0.2
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-
   flutter_lints: ^6.0.0
 
 flutter:
   uses-material-design: true
+
   assets:
     - assets/images/
     - assets/images/map.png
     # - assets/icons/
+
   fonts:
     - family: "Jost"
       fonts:
