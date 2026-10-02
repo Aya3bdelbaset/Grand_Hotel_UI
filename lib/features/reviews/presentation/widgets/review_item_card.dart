@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gap/flutter_gap.dart';
-import 'package:grand_hotel_ui/features/reviews/data/model/review_item_model';
+import 'package:grand_hotel_ui/features/reviews/data/model/review_item_model.dart';
 
 class ReviewItemCard extends StatelessWidget {
   final ReviewItemModel review;
