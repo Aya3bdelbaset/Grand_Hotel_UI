@@ -1,0 +1,36 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:grand_hotel_ui/core/constants/app_assets.dart';
+import 'package:grand_hotel_ui/core/theme/app_colors.dart';
+import 'package:grand_hotel_ui/core/theme/app_text_style.dart';
+import 'package:grand_hotel_ui/core/theme/app_theme.dart';
+import 'package:grand_hotel_ui/core/routes/routes_name.dart';
+import 'package:grand_hotel_ui/core/constants/app_sizes.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+
+
+
+
+class Customaddremove extends StatelessWidget {
+  const Customaddremove({
+    super.key, required this.Containercl, required this.iconcolor, required this.icon,
+  });
+  final Color Containercl;
+  final Color iconcolor;
+  final IconData icon;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: 30.w,
+      height: 30.h,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(AppSizes.radiusXxl),
+       color: Containercl,
+      ),
+      child: Center(
+        child: Icon( icon ,color: iconcolor,),
+      ),
+    );
+  }
+}

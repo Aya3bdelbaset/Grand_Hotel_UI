@@ -60,22 +60,22 @@ class AppThemes {
         ),
 
         contentPadding:  EdgeInsets.symmetric(
-          horizontal: 16.w,
-          vertical: 14.h,
+          horizontal: 16,
+          vertical: 14,
         ),
 
         border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(12.r),
+          borderRadius: BorderRadius.circular(12),
           borderSide: BorderSide.none,
         ),
 
         enabledBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(12.r),
+          borderRadius: BorderRadius.circular(12),
           borderSide: BorderSide.none,
         ),
 
         focusedBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(12.r),
+          borderRadius: BorderRadius.circular(12),
           borderSide: BorderSide(
             color: AppColors.primaryColor,
           ),
@@ -89,7 +89,7 @@ class AppThemes {
           foregroundColor: AppColors.whiteColor,
           elevation: 0,
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(12.r),
+            borderRadius: BorderRadius.circular(12),
           ),
           textStyle: TextStyles.body.copyWith(
             fontFamily: AppFonts.jost,
