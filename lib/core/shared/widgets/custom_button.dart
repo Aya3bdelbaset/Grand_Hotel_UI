@@ -52,13 +52,6 @@ class AppButton extends StatelessWidget {
                 color: foregroundColor ?? AppColors.whiteColor,
               ),
             ),
-            // if (icon != null) ...[
-            //   const SizedBox(width: AppSizes.xs),
-            //   Icon(
-            //     icon,
-            //     size: AppSizes.iconMedium,
-            //   ),
-            // ],
           ],
         ),
       ),
