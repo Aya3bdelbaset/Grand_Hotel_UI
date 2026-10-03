@@ -105,23 +105,23 @@ The project follows a **feature-based structure** to keep the code organized, sc
 
 ### Authentication
 
-
-|---|---|---|---|
 | <img src="assets\screenshots\flutter_01.png" width="180"/> | <img src="assets\screenshots\flutter_02.png" width="180"/> | <img src="assets\screenshots\flutter_03.png" width="180"/> | <img src="assets\screenshots\flutter_04.png" width="180"/> |
-| <img src="assets\screenshots\flutter_05.png" width="180"/> | <img src="assets\screenshots\flutter_06.png" width="180"/> | <img src="assets\screenshots\flutter_07.png" width="180"/> | <img src="assets\screenshots\flutter_08.png" width="180"/> |
+| <img src="assets\screenshots\flutter_05.png" width="180"/> | <img src="assets\screenshots\flutter_06.png" width="180"/> | <img src="assets\screenshots\flutter_07.png" width="180"/> | <img src="assets\screenshots\flutter_08.png" width="180"/> 
 
 ### Home & Hotel Discovery
 
-| Home | Search | Favorites | Hotel Details |
-|---|---|---|---|
 | <img src="assets\screenshots\flutter_01 copy.png" width="180"/> | <img src="assets\screenshots\flutter_02 copy.png" width="180"/> | <img src="assets\screenshots\flutter_03 copy.png" width="180"/> | <img src="assets\screenshots\flutter_04 copy.png" width="180"/> |
 | <img src="assets\screenshots\flutter_05 copy.png" width="180"/> | <img 
+| <img src="assets\screenshots\flutter_01 copy 2.png" width="180"/> | <img 
+| <img src="assets\screenshots\flutter_02 copy 2.png" width="180"/> | <img 
+| <img src="assets\screenshots\flutter_03 copy 2.png" width="180"/> | <img 
+| <img src="assets\screenshots\flutter_04 copy 2.png" width="180"/> | <img 
+| <img src="assets\screenshots\flutter_05 copy 2.png" width="180"/> | <img 
 
 
-### Booking & Profile
 
-| My Bookings | Booking Details | Messages | Profile |
-|---|---|---|---|
+### Messages & Profile
+
 | <img src="assets\screenshots\flutter_06 copy.png" width="180"/> | <img src="assets\screenshots\flutter_07 copy.png" width="180"/> | <img 
 
 ---

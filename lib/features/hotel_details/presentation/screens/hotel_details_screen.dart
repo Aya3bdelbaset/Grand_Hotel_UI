@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gap/flutter_gap.dart';
+import 'package:grand_hotel_ui/core/routes/routes_name.dart';
 import 'package:grand_hotel_ui/features/home/data/dummy_hotels.dart';
 import 'package:grand_hotel_ui/features/home/data/model/hotel_model.dart';
 import 'package:grand_hotel_ui/features/hotel_details/model/review_model.dart';
@@ -149,7 +150,9 @@ class _HotelDetailsScreenState extends State<HotelDetailsScreen> {
       ),
       bottomNavigationBar: BookingBottomBar(
         price: currentHotel.price.toDouble(),
-        onBookingTap: () {},
+        onBookingTap: () {
+          Navigator.pushNamed(context, RouteNames.requestToBook);
+        },
       ),
     );
   }
