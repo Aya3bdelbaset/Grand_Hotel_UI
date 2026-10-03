@@ -1,10 +1,9 @@
+
 import 'package:flutter/material.dart';
 import 'package:grand_hotel_ui/core/routes/routes_name.dart';
+import 'package:grand_hotel_ui/core/shared/main_screen.dart';
 
-import 'package:grand_hotel_ui/features/booking/request_book/presentation/screens/paymentMethod.dart';
-import 'package:grand_hotel_ui/features/booking/request_book/presentation/screens/request_to_book_screen.dart';
-import 'package:grand_hotel_ui/features/booking/request_book/presentation/screens/bookingComplete.dart';
-
+//   AUTH 
 import 'package:grand_hotel_ui/features/auth/presentation/screens/onboarding/onboarding.dart';
 import 'package:grand_hotel_ui/features/auth/presentation/screens/register/createNewPasswordScreen.dart';
 import 'package:grand_hotel_ui/features/auth/presentation/screens/register/forgetPassword.dart';
@@ -13,9 +12,34 @@ import 'package:grand_hotel_ui/features/auth/presentation/screens/register/signU
 import 'package:grand_hotel_ui/features/auth/presentation/screens/register/verficationScreen.dart';
 import 'package:grand_hotel_ui/features/auth/presentation/screens/splash/splash.dart';
 
+//    HOME
+import 'package:grand_hotel_ui/features/home/presentation/screens/search_screen.dart';
+import 'package:grand_hotel_ui/features/home/presentation/screens/favorite_screen.dart';
+
+//    HOTEL DETAILS 
+import 'package:grand_hotel_ui/features/hotel_details/presentation/screens/hotel_details_screen.dart';
+
+//      REVIEWS 
+import 'package:grand_hotel_ui/features/reviews/presentation/screens/reviews_screen.dart';
+
+// BOOKING 
+import 'package:grand_hotel_ui/features/booking/request_book/presentation/screens/request_to_book_screen.dart';
+import 'package:grand_hotel_ui/features/booking/request_book/presentation/screens/paymentMethod.dart';
+import 'package:grand_hotel_ui/features/booking/request_book/presentation/screens/bookingComplete.dart';
+import 'package:grand_hotel_ui/features/booking/my_booking/presentation/screens/my_booking_screen.dart';
+import 'package:grand_hotel_ui/features/booking/my_booking/presentation/screens/booking_details_screen.dart';
+
+//  PROFILE
+import 'package:grand_hotel_ui/features/profile/presentation/screens/profile_screen.dart';
+
+//    MESSAGES 
+import 'package:grand_hotel_ui/features/message/presentation/screens/messages_screen.dart';
+
 abstract final class AppRoutes {
   static Route<dynamic>? onGenerateRoute(RouteSettings settings) {
     switch (settings.name) {
+      //  AUTH 
+
       case RouteNames.splash:
         return MaterialPageRoute(
           builder: (_) => const SplashScreen(),
@@ -58,6 +82,41 @@ abstract final class AppRoutes {
           settings: settings,
         );
 
+      //  HOME 
+
+      case RouteNames.home:
+        return MaterialPageRoute(
+          builder: (_) => const MainScreen(),
+          settings: settings,
+        );
+      case RouteNames.search:
+        return MaterialPageRoute(
+          builder: (_) => const SearchScreen(),
+          settings: settings,
+        );
+
+      case RouteNames.favorite:
+        return MaterialPageRoute(
+          builder: (_) => const FavoriteScreen(),
+          settings: settings,
+        );
+
+      //  HOTEL DETAILS 
+
+      case RouteNames.details:
+        return MaterialPageRoute(
+          builder: (_) => const HotelDetailsScreen(),
+          settings: settings,
+        );
+
+      case RouteNames.reviews:
+        return MaterialPageRoute(
+          builder: (_) => const ReviewsScreen(),
+          settings: settings,
+        );
+
+      //  BOOKING 
+
       case RouteNames.requestToBook:
         return MaterialPageRoute(
           builder: (_) => const RequestToBookScreen(),
@@ -76,8 +135,41 @@ abstract final class AppRoutes {
           settings: settings,
         );
 
+      case RouteNames.myBooking:
+        return MaterialPageRoute(
+          builder: (_) => const MyBookingScreen(),
+          settings: settings,
+        );
+
+      case RouteNames.bookingDetails:
+        return MaterialPageRoute(
+          builder: (_) => const BookingDetailsScreen(),
+          settings: settings,
+        );
+
+      //  PROFILE 
+
+      case RouteNames.profile:
+        return MaterialPageRoute(
+          builder: (_) => const ProfileScreen(),
+          settings: settings,
+        );
+
+      //  MESSAGES 
+
+      case RouteNames.messages:
+        return MaterialPageRoute(
+          builder: (_) => const MessagesScreen(),
+          settings: settings,
+        );
+
+      //  NOT FOUND 
+
       default:
-        return _placeholderRoute(settings, 'Not Found');
+        return _placeholderRoute(
+          settings,
+          'Not Found',
+        );
     }
   }
 
@@ -85,7 +177,7 @@ abstract final class AppRoutes {
     RouteSettings settings,
     String title,
   ) {
-    return MaterialPageRoute(
+    return MaterialPageRoute<void>(
       settings: settings,
       builder: (_) => Scaffold(
         body: Center(
