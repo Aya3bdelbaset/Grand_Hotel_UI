@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:grand_hotel_ui/core/routes/routes_name.dart';
 import 'package:grand_hotel_ui/core/shared/widgets/custom_button.dart';
 import 'package:grand_hotel_ui/core/constants/app_fonts.dart';
 import 'package:grand_hotel_ui/core/theme/app_colors.dart';
@@ -154,7 +155,7 @@ class _SignInScreenState extends State<SignInScreen> {
 
                     GestureDetector(
                       onTap: () {
-                        Navigator.pushNamed(context, '/forgot-password');
+                        Navigator.pushNamed(context, RouteNames.forgotPassword);
                       },
                       child: Text(
                         'Forgot Password',
@@ -176,7 +177,9 @@ class _SignInScreenState extends State<SignInScreen> {
                   child: AppButton(
                     text: 'Sign In',
                     onPressed: () {
-                      Navigator.pushReplacementNamed(context, '/home');
+                      if (_formKey.currentState!.validate()) {
+                        Navigator.pushNamed(context,RouteNames.home);
+                      }
                     },
                   ),
                 ),
@@ -198,7 +201,7 @@ class _SignInScreenState extends State<SignInScreen> {
 
                       GestureDetector(
                         onTap: () {
-                          Navigator.pushNamed(context, '/sign-up');
+                          Navigator.pushNamed(context, RouteNames.signUp);
                         },
                         child: Text(
                           'Sign Up',
