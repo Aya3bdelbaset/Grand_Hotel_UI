@@ -1,12 +1,12 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:grand_hotel_ui/features/auth/presentation/widgets/arrow_back.dart';
 import 'package:grand_hotel_ui/core/shared/widgets/custom_button.dart';
 import 'package:grand_hotel_ui/core/constants/app_fonts.dart';
 import 'package:grand_hotel_ui/core/routes/routes_name.dart';
 import 'package:grand_hotel_ui/core/theme/app_colors.dart';
 import 'package:grand_hotel_ui/core/theme/app_text_style.dart';
+import 'package:grand_hotel_ui/features/auth/presentation/ui/widgets/arrow_back.dart';
 import 'package:pinput/pinput.dart';
 
 class EnterOTPScreen extends StatefulWidget {

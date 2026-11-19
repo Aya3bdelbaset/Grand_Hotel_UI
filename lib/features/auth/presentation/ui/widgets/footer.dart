@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:grand_hotel_ui/core/constants/app_fonts.dart';
-import 'package:grand_hotel_ui/features/auth/presentation/widgets/socialButton.dart';
+import 'package:grand_hotel_ui/features/auth/presentation/ui/widgets/socialButton.dart';
 
 class Footer extends StatelessWidget {
   const Footer({super.key});

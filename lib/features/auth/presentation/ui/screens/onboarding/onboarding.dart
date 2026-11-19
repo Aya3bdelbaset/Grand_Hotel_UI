@@ -8,7 +8,7 @@ import 'package:grand_hotel_ui/core/routes/routes_name.dart';
 import 'package:grand_hotel_ui/core/shared/widgets/custom_button.dart';
 import 'package:grand_hotel_ui/core/theme/app_colors.dart';
 import 'package:grand_hotel_ui/core/theme/app_text_style.dart';
-import 'package:grand_hotel_ui/features/auth/presentation/widgets/dont_have_account.dart';
+import 'package:grand_hotel_ui/features/auth/presentation/ui/widgets/dont_have_account.dart';
 
 class OnboardingScreen extends StatelessWidget {
   const OnboardingScreen({super.key});

@@ -6,8 +6,10 @@ import 'package:grand_hotel_ui/core/constants/app_fonts.dart';
 import 'package:grand_hotel_ui/core/theme/app_colors.dart';
 import 'package:grand_hotel_ui/core/theme/app_text_style.dart';
 import 'package:grand_hotel_ui/core/validators/validation.dart';
-import 'package:grand_hotel_ui/features/auth/presentation/widgets/custom_text_field.dart';
-import 'package:grand_hotel_ui/features/auth/presentation/widgets/footer.dart';
+import 'package:grand_hotel_ui/features/auth/presentation/ui/widgets/custom_text_field.dart';
+import 'package:grand_hotel_ui/features/auth/presentation/ui/widgets/footer.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:grand_hotel_ui/features/auth/presentation/cubit/auth_cubit.dart';
 
 class SignInScreen extends StatefulWidget {
   const SignInScreen({super.key});
@@ -171,17 +173,43 @@ class _SignInScreenState extends State<SignInScreen> {
                 ),
 
                 SizedBox(height: 24.h),
-                SizedBox(
-                  width: double.infinity,
-                  height: 46.h,
-                  child: AppButton(
-                    text: 'Sign In',
-                    onPressed: () {
-                      if (_formKey.currentState!.validate()) {
-                        Navigator.pushNamed(context,RouteNames.home);
-                      }
-                    },
-                  ),
+
+                BlocConsumer<AuthCubit, AuthState>(
+                  listener: (context, state) {
+                    if (state is SignedInSuccess) {
+                      Navigator.pushReplacementNamed(context, RouteNames.home);
+                    }
+
+                    if (state is SignedInError) {
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        SnackBar(
+                          content: Text(state.message),
+                          backgroundColor: Colors.red,
+                        ),
+                      );
+                    }
+                  },
+                  builder: (context, state) {
+                    final isLoading = state is SignedInLoading;
+
+                    return SizedBox(
+                      width: double.infinity,
+                      height: 46.h,
+                      child: AppButton(
+                        text: isLoading ? 'Signing In...' : 'Sign In',
+                        onPressed: () {
+                          if (isLoading) return;
+
+                          if (_formKey.currentState!.validate()) {
+                            context.read<AuthCubit>().signin(
+                              email: emailController.text.trim(),
+                              password: passwordController.text,
+                            );
+                          }
+                        },
+                      ),
+                    );
+                  },
                 ),
 
                 SizedBox(height: 24.h),

@@ -1,28 +1,26 @@
-
 import 'package:flutter/material.dart';
 import 'package:grand_hotel_ui/core/routes/routes_name.dart';
 import 'package:grand_hotel_ui/core/shared/main_screen.dart';
-
-//   AUTH 
-import 'package:grand_hotel_ui/features/auth/presentation/screens/onboarding/onboarding.dart';
-import 'package:grand_hotel_ui/features/auth/presentation/screens/register/createNewPasswordScreen.dart';
-import 'package:grand_hotel_ui/features/auth/presentation/screens/register/forgetPassword.dart';
-import 'package:grand_hotel_ui/features/auth/presentation/screens/register/signInScreen.dart';
-import 'package:grand_hotel_ui/features/auth/presentation/screens/register/signUpScreen.dart';
-import 'package:grand_hotel_ui/features/auth/presentation/screens/register/verficationScreen.dart';
-import 'package:grand_hotel_ui/features/auth/presentation/screens/splash/splash.dart';
+//   AUTH
+import 'package:grand_hotel_ui/features/auth/presentation/ui/screens/onboarding/onboarding.dart';
+import 'package:grand_hotel_ui/features/auth/presentation/ui/screens/register/createNewPasswordScreen.dart';
+import 'package:grand_hotel_ui/features/auth/presentation/ui/screens/register/forgetPassword.dart';
+import 'package:grand_hotel_ui/features/auth/presentation/ui/screens/register/signInScreen.dart';
+import 'package:grand_hotel_ui/features/auth/presentation/ui/screens/register/signUpScreen.dart';
+import 'package:grand_hotel_ui/features/auth/presentation/ui/screens/register/verficationScreen.dart';
+import 'package:grand_hotel_ui/features/auth/presentation/ui/screens/splash/splash.dart';
 
 //    HOME
 import 'package:grand_hotel_ui/features/home/presentation/screens/search_screen.dart';
 import 'package:grand_hotel_ui/features/home/presentation/screens/favorite_screen.dart';
 
-//    HOTEL DETAILS 
+//    HOTEL DETAILS
 import 'package:grand_hotel_ui/features/hotel_details/presentation/screens/hotel_details_screen.dart';
 
-//      REVIEWS 
+//      REVIEWS
 import 'package:grand_hotel_ui/features/reviews/presentation/screens/reviews_screen.dart';
 
-// BOOKING 
+// BOOKING
 import 'package:grand_hotel_ui/features/booking/request_book/presentation/screens/request_to_book_screen.dart';
 import 'package:grand_hotel_ui/features/booking/request_book/presentation/screens/paymentMethod.dart';
 import 'package:grand_hotel_ui/features/booking/request_book/presentation/screens/bookingComplete.dart';
@@ -32,13 +30,13 @@ import 'package:grand_hotel_ui/features/booking/my_booking/presentation/screens/
 //  PROFILE
 import 'package:grand_hotel_ui/features/profile/presentation/screens/profile_screen.dart';
 
-//    MESSAGES 
+//    MESSAGES
 import 'package:grand_hotel_ui/features/message/presentation/screens/messages_screen.dart';
 
 abstract final class AppRoutes {
   static Route<dynamic>? onGenerateRoute(RouteSettings settings) {
     switch (settings.name) {
-      //  AUTH 
+      //  AUTH
 
       case RouteNames.splash:
         return MaterialPageRoute(
@@ -82,7 +80,7 @@ abstract final class AppRoutes {
           settings: settings,
         );
 
-      //  HOME 
+      //  HOME
 
       case RouteNames.home:
         return MaterialPageRoute(
@@ -101,7 +99,7 @@ abstract final class AppRoutes {
           settings: settings,
         );
 
-      //  HOTEL DETAILS 
+      //  HOTEL DETAILS
 
       case RouteNames.details:
         return MaterialPageRoute(
@@ -115,7 +113,7 @@ abstract final class AppRoutes {
           settings: settings,
         );
 
-      //  BOOKING 
+      //  BOOKING
 
       case RouteNames.requestToBook:
         return MaterialPageRoute(
@@ -147,7 +145,7 @@ abstract final class AppRoutes {
           settings: settings,
         );
 
-      //  PROFILE 
+      //  PROFILE
 
       case RouteNames.profile:
         return MaterialPageRoute(
@@ -155,7 +153,7 @@ abstract final class AppRoutes {
           settings: settings,
         );
 
-      //  MESSAGES 
+      //  MESSAGES
 
       case RouteNames.messages:
         return MaterialPageRoute(
@@ -163,13 +161,10 @@ abstract final class AppRoutes {
           settings: settings,
         );
 
-      //  NOT FOUND 
+      //  NOT FOUND
 
       default:
-        return _placeholderRoute(
-          settings,
-          'Not Found',
-        );
+        return _placeholderRoute(settings, 'Not Found');
     }
   }
 
@@ -179,11 +174,7 @@ abstract final class AppRoutes {
   ) {
     return MaterialPageRoute<void>(
       settings: settings,
-      builder: (_) => Scaffold(
-        body: Center(
-          child: Text(title),
-        ),
-      ),
+      builder: (_) => Scaffold(body: Center(child: Text(title))),
     );
   }
 }

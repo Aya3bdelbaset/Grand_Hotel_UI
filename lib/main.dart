@@ -11,5 +11,6 @@ Future<void> main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
 );
+ debugPrint('Firebase Initialized: ${Firebase.app().name}');
   runApp(const GrandHotelApp());
 }

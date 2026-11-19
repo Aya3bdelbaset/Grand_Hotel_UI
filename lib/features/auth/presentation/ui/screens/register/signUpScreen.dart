@@ -6,10 +6,11 @@ import 'package:grand_hotel_ui/core/routes/routes_name.dart';
 import 'package:grand_hotel_ui/core/theme/app_colors.dart';
 import 'package:grand_hotel_ui/core/theme/app_text_style.dart';
 import 'package:grand_hotel_ui/core/validators/validation.dart';
-
-import 'package:grand_hotel_ui/features/auth/presentation/widgets/arrow_back.dart';
-import 'package:grand_hotel_ui/features/auth/presentation/widgets/custom_text_field.dart';
-import 'package:grand_hotel_ui/features/auth/presentation/widgets/footer.dart';
+import 'package:grand_hotel_ui/features/auth/presentation/ui/widgets/arrow_back.dart';
+import 'package:grand_hotel_ui/features/auth/presentation/ui/widgets/custom_text_field.dart';
+import 'package:grand_hotel_ui/features/auth/presentation/ui/widgets/footer.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:grand_hotel_ui/features/auth/presentation/cubit/auth_cubit.dart';
 
 class SignUpScreen extends StatefulWidget {
   const SignUpScreen({super.key});
@@ -38,9 +39,17 @@ class _SignUpScreenState extends State<SignUpScreen> {
     super.dispose();
   }
 
+  // void _signUp() {
+  //   if (_formKey.currentState!.validate()) {
+  //     Navigator.pushReplacementNamed(context, RouteNames.enterOTP);
+  //   }
+  // }
   void _signUp() {
     if (_formKey.currentState!.validate()) {
-      Navigator.pushReplacementNamed(context, RouteNames.enterOTP);
+      context.read<AuthCubit>().signup(
+        email: emailController.text.trim(),
+        password: passwordController.text,
+      );
     }
   }
 
@@ -129,13 +138,41 @@ class _SignUpScreenState extends State<SignUpScreen> {
 
                 SizedBox(height: 24.h),
 
-                SizedBox(
-                  width: double.infinity,
-                  height: 46.h,
-                  child: AppButton(
-                    text: 'Create An Account',
-                    onPressed: _signUp,
-                  ),
+                BlocConsumer<AuthCubit, AuthState>(
+                  listener: (context, state) {
+                    if (state is SignedUpSuccess) {
+                      Navigator.pushReplacementNamed(
+                        context,
+                        RouteNames.enterOTP,
+                      );
+                    }
+
+                    if (state is SignedUpError) {
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        SnackBar(
+                          content: Text(state.message),
+                          backgroundColor: Colors.red,
+                        ),
+                      );
+                    }
+                  },
+                  builder: (context, state) {
+                    final isLoading = state is SignedUpLoading;
+
+                    return SizedBox(
+                      width: double.infinity,
+                      height: 46.h,
+                      child: AppButton(
+                        text: isLoading
+                            ? 'Creating Account...'
+                            : 'Create An Account',
+                        onPressed: () {
+                          if (isLoading) return;
+                          _signUp();
+                        },
+                      ),
+                    );
+                  },
                 ),
 
                 SizedBox(height: 24.h),

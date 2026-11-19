@@ -26,6 +26,9 @@ dependencies:
   barcode_widgets: ^2.0.0
   syncfusion_flutter_datepicker: ^35.1.37
   firebase_core: ^5.1.0
+  firebase_auth: ^7.1.0
+  bloc: ^9.2.1
+  flutter_bloc: ^9.1.1
 
 dev_dependencies:
   flutter_test:
